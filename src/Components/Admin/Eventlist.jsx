@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { setSender } from "../redux/newEvent";
-import "./eventList.css";
+import "./eventList.css"
 
 const Eventlist = (props) => {
   const [events, setEvents] = useState([]);
@@ -58,23 +58,26 @@ const Eventlist = (props) => {
             events.map((eachEvent, index) => (
               <>
                 <div className="coco">
-                  <ul className="text-success mb-5" key={eachEvent.eventId}>
+                  <ul
+                    className="text-success mb-5"
+                    key={eachEvent.eventId}
+                  >
                     <li>
                       <Link
                         className="listing"
                         onClick={() => dispatch(setSender(props.user))}
-                        to={`/eventtrackpro/adminpage/${eachEvent.eventId}`}
+                        to={`/adminpage/${eachEvent.eventId}`}
                         key={eachEvent.eventId}
                       >
-                        <table>
+                        <table className="table">
                           <thead>
                             <tr>
-                              <th className="text-success">S/N</th>
-                              <th className="text-success">Name</th>
-                              <th className="text-success">Service Index</th>
-                              <th className="text-success">Event ID</th>
-                              <th className="text-success">Admin</th>
-                              <th className="text-success">Date</th>
+                              <th>S/N</th>
+                              <th>Name</th>
+                              <th>Service Index</th>
+                              <th>Event ID</th>
+                              <th>Admin</th>
+                              <th>Date</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -100,6 +103,64 @@ const Eventlist = (props) => {
         </div>
       </div>
     </div>
+    // <table class="table mt-3">
+    //           <thead>
+    //             <tr>
+    //               <th>S/N</th>
+    //               <th>Counter</th>
+    //               <th>Service Index</th>
+    //               <th>Male</th>
+    //               <th>Female</th>
+    //               <th>Children</th>
+    //               <th>Vehicles</th>
+    //               <th>Motor Bikes</th>
+    //               <th>Converts</th>
+    //               <th>New Timers</th>
+    //               <th>Total</th>
+    //               <th>Actions</th>
+    //             </tr>
+    //           </thead>
+    //           <tbody id="tableContent">
+    //             <tr>
+    //               <td>{index}</td>
+    //               <td>{each.sender}</td>
+    //               <td>{index}</td>
+    //               <td>{each.male}</td>
+    //               <td>{each.female}</td>
+    //               <td>{each.children}</td>
+    //               <td>{each.vehicles}</td>
+    //               <td>{each.motorbikes}</td>
+    //               <td>{}</td>
+    //               <td>{each.firsttimers}</td>
+    //               <td>
+    //                 {" "}
+    //                 {Number(each.male) +
+    //                   Number(each.female) +
+    //                   Number(each.children)}
+    //               </td>
+    //               <td>
+    //                 {acceptedCounts[index] ? (
+    //                   <div></div>
+    //                 ) : (
+    //                   <div>
+    //                     <button
+    //                       className="btn btn-success "
+    //                       onClick={() => acceptCount(index)}
+    //                     >
+    //                       +
+    //                     </button>
+    //                     <button
+    //                       className="btn btn-danger mx-2"
+    //                       onClick={() => rejectCount(index)}
+    //                     >
+    //                       X
+    //                     </button>
+    //                   </div>
+    //                 )}
+    //               </td>
+    //             </tr>
+    //           </tbody>
+    //         </table>
   );
 };
 

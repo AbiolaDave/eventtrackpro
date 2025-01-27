@@ -27,7 +27,7 @@ const Dashboard = () => {
       .then((response) => {
         if (!response.data.status) {
           console.log(response.data.status, "here error");
-          navigate("/eventtrackpro/login");
+          navigate("/login");
         } else {
           setuser(response.data.firstname);
           console.log(response.data.firstname);
@@ -35,7 +35,7 @@ const Dashboard = () => {
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        navigate("/eventtrackpro/login");
+        navigate("/login");
       });
   }, []);
 

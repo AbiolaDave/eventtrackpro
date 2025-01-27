@@ -10,19 +10,16 @@ const style = {
 const Navbar = () => {
   let navigate = useNavigate();
   const register = () => {
-    navigate("/eventtrackpro/register");
+    navigate("/register");
   };
   const login = () => {
-    navigate("/eventtrackpro/selectlogin");
+    navigate("/selectlogin");
   };
   return (
     <>
       <nav className="navbar navbar-expand-lg" style={style}>
         <div className="container-fluid">
-          <a
-            className="navbar-brand d-flex align-items-center"
-            href="/eventtrackpro/"
-          >
+          <a className="navbar-brand d-flex align-items-center" href="/">
             <img
               className="mx-5 countlogo"
               height="50px"
@@ -50,7 +47,7 @@ const Navbar = () => {
                 <a
                   className="nav-link text-light fw-bold fs-4"
                   aria-current="page"
-                  href="/eventtrackpro/"
+                  href="/"
                 >
                   About Us
                 </a>
@@ -59,7 +56,7 @@ const Navbar = () => {
                 <a
                   className="nav-link text-light fw-bold fs-4"
                   aria-current="page"
-                  href="/eventtrackpro/"
+                  href="/"
                 >
                   How To Register
                 </a>
@@ -68,7 +65,7 @@ const Navbar = () => {
                 <a
                   className="nav-link text-light fw-bold fs-4"
                   aria-current="page"
-                  href="/eventtrackpro/"
+                  href="/"
                 >
                   Our Team
                 </a>
@@ -83,7 +80,7 @@ const Navbar = () => {
                 Log in
               </a>
               <a
-                href="/eventtrackpro/register"
+                href="#register"
                 className="btn-lg btn mx-3 btn-light"
                 onClick={register}
               >

@@ -17,7 +17,7 @@ const CountCoordinatorMenu = () => {
     <>
       <div className="admin">
         <div className="mt-5 d-flex text-success">
-          <a className="loginstyle" href="/eventtrackpro/">
+          <a className="loginstyle" href="/">
             <i
               class="fa-solid fa-house fa-xl mx-2 my-2"
               style={{ color: "green" }}
@@ -47,7 +47,7 @@ const CountCoordinatorMenu = () => {
           </a>
         </div>
         <div className="mt-5 d-flex text-success ">
-          <a className="loginstyle" href="/eventtrackpro/adminlogin">
+          <a className="loginstyle" href="/adminlogin">
             <i
               class="fa-solid fa-right-to-bracket fa-2xl mx-2 my-2"
               style={{ color: "green" }}
@@ -56,7 +56,7 @@ const CountCoordinatorMenu = () => {
           </a>
         </div>
         <div className="mt-5 d-flex text-success">
-          <a className="loginstyle" href="/eventtrackpro/counterlogin">
+          <a className="loginstyle" href="/counterlogin">
             <i
               class="fa-solid fa-right-to-bracket fa-2xl mx-2 my-3"
               style={{ color: "green" }}

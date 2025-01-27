@@ -38,7 +38,7 @@ const AdminPage = () => {
       .then((response) => {
         if (!response.data.status) {
           console.log(response.data.status, "here error");
-          navigate("/eventtrackpro/login");
+          navigate("/login");
         } else {
           setuser(response.data.firstname);
           setadmin(response.data.admin);
@@ -49,7 +49,7 @@ const AdminPage = () => {
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
-        navigate("/eventtrackpro/login");
+        navigate("/login");
       });
   }, []);
   let componentToDisplay;

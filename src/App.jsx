@@ -30,53 +30,41 @@ import SelectLogin from "./Pages/SelectLogin";
 function App() {
   return (
     <>
-      <Routes basename="/eventtrackpro">
-        <Route path="/eventtrackpro/" element={<Home />} />
-        <Route path="/eventtrackpro/register" element={<Register />} />
-        <Route path="/eventtrackpro/login" element={<Login />} />
-        <Route path="/eventtrackpro/dashboard" element={<Dashboard />} />
-        <Route path="/eventtrackpro/adminmenu" element={<AdminMenu />} />
-        <Route
-          path="/eventtrackpro/adminregister"
-          element={<AdminRegister />}
-        />
-        <Route path="/eventtrackpro/createevents" element={<CreateEvents />} />
-        <Route path="/eventtrackpro/trial" element={<Trial />} />
-        <Route path="/eventtrackpro/eventlist" element={<Eventlist />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/adminmenu" element={<AdminMenu />} />
+        <Route path="/adminregister" element={<AdminRegister />} />
+        <Route path="/createevents" element={<CreateEvents />} />
+        <Route path="/trial" element={<Trial />} />
+        <Route path="/eventlist" element={<Eventlist />} />
         {/* <Route path="/product/:id" element={<Product />} /> */}
-        <Route path="/eventtrackpro/adminpage/:eventId" element={<Events />} />
+        <Route path="/adminpage/:eventId" element={<Events />} />
         {/* <Route path="/addrecords/:Id" element={<AddRecords />} /> */}
-        <Route path="/eventtrackpro/newevent" element={<NewEvent />} />
-        <Route path="/eventtrackpro/adminpage" element={<AdminPage />} />
-        <Route path="/eventtrackpro/adminbody" element={<AdminBody />} />
-        <Route path="/eventtrackpro/addrow" element={<AddRow />} />
-        <Route path="/eventtrackpro/addcounter" element={<AddCounter />} />
-        <Route path="/eventtrackpro/counterpage" element={<CounterPage />} />
-        <Route path="/eventtrackpro/adminlogin" element={<AdminLogin />} />
+        <Route path="/newevent" element={<NewEvent />} />
+        <Route path="/adminpage" element={<AdminPage />} />
+        <Route path="/adminbody" element={<AdminBody />} />
+        <Route path="/addrow" element={<AddRow />} />
+        <Route path="/addcounter" element={<AddCounter />} />
+        <Route path="/counterpage" element={<CounterPage />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
+        <Route path="/counterregister" element={<CounterRegister />} />
+        <Route path="/counterlogin" element={<CounterLogin />} />
+        <Route path="/countcoordinator" element={<CountCordinator />} />
+        <Route path="/selectlogin" element={<SelectLogin />} />
         <Route
-          path="/eventtrackpro/counterregister"
-          element={<CounterRegister />}
-        />
-        <Route path="/eventtrackpro/counterlogin" element={<CounterLogin />} />
-        <Route
-          path="/eventtrackpro/countcoordinator"
-          element={<CountCordinator />}
-        />
-        <Route path="/eventtrackpro/selectlogin" element={<SelectLogin />} />
-        <Route
-          path="/eventtrackpro/countcoordinatorregister"
+          path="/countcoordinatorregister"
           element={<CountCoordinatorRegister />}
         />
         <Route
-          path="/eventtrackpro/countcoordinatorlogin"
+          path="/countcoordinatorlogin"
           element={<CountCoordinatorLogin />}
         />
+        <Route path="/counterpage/:eventId" element={<EventsCounter />} />
         <Route
-          path="/eventtrackpro/counterpage/:eventId"
-          element={<EventsCounter />}
-        />
-        <Route
-          path="/eventtrackpro/countcoordinator/:eventId"
+          path="/countcoordinator/:eventId"
           element={<EventsCountCoordinator />}
         />
       </Routes>

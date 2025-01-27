@@ -24,7 +24,7 @@ const CounterRegister = () => {
           console.log(response);
           if (response.data.status) {
             console.log("hello", response.data.status);
-            navigate("/eventtrackpro/counterpage");
+            navigate("/counterpage");
           } else {
             // navigate("/counterpage");
             console.log(response.data.message);
@@ -48,7 +48,7 @@ const CounterRegister = () => {
     <main className="min-vh-150 backg d-flex justify-content-center align-items-center">
       <div className="container mt-5">
         <div className="row">
-          <div className="reg col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5 con-box">
+          <div className="reg col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5">
             <div className="text-center mt-5">
               <img className="" height="50px" src={countlogo} alt="" />
             </div>
@@ -120,7 +120,7 @@ const CounterRegister = () => {
                 Submit
               </button>
               <div className="text-center text-success fw-bold">
-                <a className="text-success" href="/eventtrackpro/counterlogin">
+                <a className="text-success" href="/counterlogin">
                   <p>Login as Counter</p>
                 </a>
               </div>

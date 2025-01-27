@@ -2,13 +2,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faBell, faCoffee } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {
-  addCounter,
-  startNewEvent,
-  viewEvent,
-} from "../Components/redux/newEvent";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
 library.add(faCoffee);
 
@@ -17,10 +11,6 @@ const style = {
 };
 
 const MainNavbar = (props) => {
-  const dispatch = useDispatch();
-
-  const createNewEvent = useSelector((state) => state);
-
   const [numb, setnumb] = useState(0);
   const [visible, setvisible] = useState(false);
 
@@ -34,16 +24,13 @@ const MainNavbar = (props) => {
 
   let navigate = useNavigate();
   const login = () => {
-    navigate("/eventtrackpro/login");
+    navigate("/login");
   };
   return (
     <>
       <nav className="navbar navbar-expand-lg" style={style}>
         <div className="container-fluid">
-          <a
-            className="navbar-brand d-flex align-items-center"
-            href="/eventtrackpro/"
-          >
+          <a className="navbar-brand d-flex align-items-center" href="/">
             <img className="mx-2" height="50px" src={countlogo} alt="" />
             <h3 className="text-white fw-bold fs-2">EventTrackPro</h3>
           </a>
@@ -64,7 +51,7 @@ const MainNavbar = (props) => {
                 <a
                   className="nav-link text-light fw-bold fs-5"
                   aria-current="page"
-                  href="/eventtrackpro/"
+                  href="/"
                 >
                   Home
                 </a>
@@ -73,7 +60,7 @@ const MainNavbar = (props) => {
                 <a
                   className="nav-link text-light fw-bold fs-5"
                   aria-current="page"
-                  href="/eventtrackpro/adminlogin"
+                  href="/adminlogin"
                 >
                   Admin
                 </a>
@@ -82,7 +69,7 @@ const MainNavbar = (props) => {
                 <a
                   className="nav-link text-light fw-bold fs-5"
                   aria-current="page"
-                  href="/eventtrackpro/counterregister"
+                  href="/counterregister"
                 >
                   Counter
                 </a>
@@ -91,7 +78,7 @@ const MainNavbar = (props) => {
                 <a
                   className="nav-link text-light fw-bold fs-5"
                   aria-current="page"
-                  href="/eventtrackpro/countcoordinatorlogin"
+                  href="/countcoordinatorlogin"
                 >
                   Coordinator
                 </a>
@@ -100,7 +87,7 @@ const MainNavbar = (props) => {
                 <a
                   className="nav-link text-light fw-bold fs-5"
                   aria-current="page"
-                  href="/eventtrackpro/"
+                  href="/"
                 >
                   Profile
                 </a>
@@ -109,7 +96,7 @@ const MainNavbar = (props) => {
                 <a
                   className="nav-link text-light fw-bold fs-5"
                   aria-current="page"
-                  href="/eventtrackpro/"
+                  href="/"
                 >
                   Contact Us
                 </a>
@@ -129,14 +116,6 @@ const MainNavbar = (props) => {
                     className="nav-link text-light fw-bold fs-5"
                   >
                     <h5 className="fw-bold">Add Counters</h5>
-                  </div>
-                </li>
-                <li className="nav-item mx-3">
-                  <div
-                    onClick={() => dispatch(startNewEvent())}
-                    className="nav-link text-light fw-bold fs-5"
-                  >
-                    <h5 className="fw-bold">Scan Events</h5>
                   </div>
                 </li>
                 <li className="nav-item mx-3">
@@ -182,7 +161,7 @@ const MainNavbar = (props) => {
               <li className="nav-item">
                 <div className="d-flex mx-2" role="search">
                   <a
-                    href="/eventtrackpro/login"
+                    href="#login"
                     className="btn-lg btn mx- btn-outline-light"
                     onClick={login}
                   >

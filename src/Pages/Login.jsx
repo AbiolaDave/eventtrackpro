@@ -52,7 +52,7 @@ const Login = () => {
           console.log(response.data.message);
         } else {
           localStorage.token = response.data.token;
-          navigate("/eventtrackpro/dashboard");
+          navigate("/dashboard");
         }
       });
 
@@ -163,10 +163,7 @@ const Login = () => {
               </form>
 
               <div className="text-center mt-3 mb-3">
-                <a
-                  className="text-success text-decoration-none"
-                  href="/eventtrackpro/"
-                >
+                <a className="text-success text-decoration-none" href="">
                   Back to Home
                 </a>
               </div>

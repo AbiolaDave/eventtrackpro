@@ -29,9 +29,9 @@ const AdminLogin = () => {
               response.data.Admintoken
             );
             localStorage.Admintoken = response.data.Admintoken;
-            navigate("/eventtrackpro/adminpage");
+            navigate("/adminpage");
           } else {
-            navigate("/eventtrackpro/adminregister");
+            navigate("/adminregister");
             console.log(response.data.message);
           }
         })
@@ -106,7 +106,7 @@ const AdminLogin = () => {
                 </button>
               </form>
               <div className="text-center text-success fw-bold">
-                <a className="text-success" href="/eventtrackpro/adminregister">
+                <a className="text-success" href="/adminregister">
                   <p>Sign up as Admin</p>
                 </a>
               </div>

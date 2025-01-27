@@ -26,7 +26,7 @@ const CountCoordinatorRegister = () => {
             console.log("hello", response.data.status);
             navigate("/countcoordinatorlogin");
           } else {
-            // navigate("/eventtrackpro/countcoordinatorregister")
+            // navigate("/countcoordinatorregister")
             console.log(response.data.message);
           }
         })
@@ -48,7 +48,7 @@ const CountCoordinatorRegister = () => {
     <main className="min-vh-150 backg d-flex justify-content-center align-items-center">
       <div className="container mt-5">
         <div className="row">
-          <div className="reg col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5 con-box">
+          <div className="reg col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5">
             <div className="text-center mt-5">
               <img className="" height="50px" src={countlogo} alt="" />
             </div>
@@ -120,10 +120,7 @@ const CountCoordinatorRegister = () => {
                 Submit
               </button>
               <div className="text-center text-success fw-bold">
-                <a
-                  className="text-success"
-                  href="/eventtrackpro/countcoordinatorlogin"
-                >
+                <a className="text-success" href="/countcoordinatorlogin">
                   <p>Login as Count-Coordinator</p>
                 </a>
               </div>

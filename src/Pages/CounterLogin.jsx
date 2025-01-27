@@ -27,9 +27,9 @@ const CounterLogin = () => {
               response.data.Countertoken
             );
             localStorage.Countertoken = response.data.Countertoken;
-            navigate("/eventtrackpro/counterpage");
+            navigate("/counterpage");
           } else {
-            navigate("/eventtrackpro/counterregister");
+            navigate("/counterregister");
             console.log(response.data.message);
           }
         })
@@ -50,7 +50,7 @@ const CounterLogin = () => {
     <main className="min-vh-150 backg d-flex justify-content-center align-items-center">
       <div className="container mt-5">
         <div className="row">
-          <div className="reg col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5 con-box">
+          <div className="reg col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5">
             <div className="text-center mt-5">
               <img className="" height="50px" src={countlogo} alt="" />
             </div>
@@ -101,10 +101,7 @@ const CounterLogin = () => {
                 Submit
               </button>
               <div className="text-center text-success fw-bold">
-                <a
-                  className="text-success"
-                  href="/eventtrackpro/counterregister"
-                >
+                <a className="text-success" href="/counterregister">
                   <p>Register as Counter</p>
                 </a>
               </div>

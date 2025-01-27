@@ -119,8 +119,9 @@
 .nav-det {
   display: none !important;
 }
-
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: 600px) {
+}
+@media only screen and (width < 500px) {
   .admin {
     display: none !important;
   }
@@ -134,35 +135,27 @@
     font-family: emirates;
     max-width: 300px !important;
     line-height: 30px;
-    margin-left: 10px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-direction: column !important;
+    margin-left: 30px !important;
   }
   .enroll p {
     max-width: 350px;
   }
   .simplified {
-    width: 70px !important;
+    width: 100px !important;
     height: 300px !important;
     border: 1px solid lightgray;
     box-shadow: 1px 1px 1px 1px lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-
   .simplified img {
-    width: 80% !important;
-    height: auto;
+    position: relative;
+    width: 100%;
+    height: 100%;
   }
   .heroe {
     position: relative;
     display: block;
     background-color: lightgray;
     height: 310vh;
-    overflow-x: hidden !important;
   }
   .my-blog {
     /* border: 1px solid red; */
@@ -171,14 +164,14 @@
   }
   .blog-grid {
     display: grid;
-    padding: 2rem !important;
+    padding: 3rem !important;
     gap: 2rem;
     position: relative;
     grid-template-columns: repeat(1, 300px) !important;
     grid-template-rows: repeat(3, 420px) !important;
     font-family: emirates;
     height: 400px;
-    margin-left: 0px;
+    margin-left: 20px;
   }
   .box0 {
     border: 1px solid lightgray;
@@ -231,7 +224,7 @@
     display: block !important;
   }
 }
-@media only screen and (max-width: 999px) {
+@media only screen and (width < 1000px) {
   .admin {
     /* background-color: red; */
     position: relative;
