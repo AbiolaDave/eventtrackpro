@@ -9,6 +9,8 @@ import countlogo from "../multimedia/attendance-logo1.jpeg";
 
 const Register = () => {
   let url = "https://eventtrackpro-backend.onrender.com/user/register";
+  
+  const [loading, setLoading] = useState(false);
   const [registeredUsers, setregisteredUsers] = useState([]);
   const [userqrcode, setuserqrcode] = useState("");
   const qrRef = useRef(null);
@@ -221,12 +223,51 @@ const Register = () => {
                 >
                   Download QR Code
                 </button>
-                <button
-                  type="submit"
-                  className="btn btn-success form-control mt-3 mb-5"
-                >
-                  Submit
-                </button>
+                {loading ? (
+                  <>
+                    <button
+                      type="submit"
+                      className="btn btn-success form-control mt-3 mb-2 invalid"
+                      invalid
+                    >
+                      Submit
+                    </button>
+                    <div className="mt-3 mb-3 text-center">
+                      <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-secondary" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-danger" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-warning" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-info" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-light" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-dark" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                    <a target="" href=""></a>
+                  </>
+                ) : (
+                  <button
+                    type="submit"
+                    className="btn btn-success form-control mt-3 mb-2"
+                  >
+                    Submit
+                  </button>
+                )}
               </form>
             </div>
           </div>

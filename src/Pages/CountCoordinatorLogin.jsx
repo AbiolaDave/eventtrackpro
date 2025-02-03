@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
 
-
 const CountCoordinatorLogin = () => {
+  const [loading, setLoading] = useState(false);
   let url =
     "https://eventtrackpro-backend.onrender.com/countcoordinator/countcoordinatorlogin";
   let navigate = useNavigate();
@@ -17,28 +17,25 @@ const CountCoordinatorLogin = () => {
       userName: "",
     },
     onSubmit: async (values) => {
+      setLoading(true);
       console.log(values, "Form Values");
       await axios
         .post(url, values)
         .then((response) => {
-          console.log(response);
           if (response.data.status) {
-            console.log(
-              "hello",
-              response.data.status,
-              response.data.CounterCoordinatortoken
-            );
             localStorage.CounterCoordinatortoken =
               response.data.CounterCoordinatortoken;
             navigate("/countcoordinator");
           } else {
-            navigate("/countcoordinatorregister")
-            console.log(response.data.message);
+            setLoading(false);
+            alert("Invalid Credentials");
+            console.log(response.data);
           }
         })
         .catch((error) => {
-            navigate("/countcoordinatorregister");
-          console.error("There was an error!", error);
+          setLoading(false);
+          alert("Network error");
+          console.log(error);
         });
     },
     validationSchema: yup.object({
@@ -100,12 +97,51 @@ const CountCoordinatorLogin = () => {
               <div className="text-danger">
                 {formik.touched.password && formik.errors.password}
               </div>
-              <button
-                type="submit"
-                className="btn btn-success form-control mt-3 mb-2"
-              >
-                Submit
-              </button>
+              {loading ? (
+                <>
+                  <button
+                    type="submit"
+                    className="btn btn-success form-control mt-3 mb-2 invalid"
+                    invalid
+                  >
+                    Submit
+                  </button>
+                  <div className="mt-3 mb-3 text-center">
+                    <div class="spinner-grow text-primary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-secondary" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-success" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-danger" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-warning" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-info" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-light" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                    <div class="spinner-grow text-dark" role="status">
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  </div>
+                  <a target="" href=""></a>
+                </>
+              ) : (
+                <button
+                  type="submit"
+                  className="btn btn-success form-control mt-3 mb-2"
+                >
+                  Submit
+                </button>
+              )}
               <div className="text-center text-success fw-bold">
                 <a className="text-success" href="/countcoordinatorregister">
                   <p>Sign up as Count-Coordinator</p>

@@ -76,14 +76,7 @@ const AddCounter = (props) => {
       let email = foundCounter[0].email;
       let admin = props.admin;
       let uniqueId = foundCounter[0].userName + admin;
-      console.log(
-        firstname,
-        lastname,
-        userName,
-        gender,
-        foundCounter,
-        uniqueId
-      );
+   
       try {
         let url = "https://eventtrackpro-backend.onrender.com/admin/scan";
 

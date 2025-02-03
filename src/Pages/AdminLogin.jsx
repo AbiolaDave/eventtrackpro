@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useFormik } from "formik";
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import Navbar from "../Components/Navbar";
@@ -8,6 +8,8 @@ import "../Pages/adminLogin.css";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
 
 const AdminLogin = () => {
+  const [loading, setLoading] = useState(false);
+
   let url = "https://eventtrackpro-backend.onrender.com/admin/adminsignin";
   let navigate = useNavigate();
 
@@ -17,25 +19,22 @@ const AdminLogin = () => {
       userName: "",
     },
     onSubmit: async (values) => {
-      console.log(values, "Form Values");
+      setLoading(true);
       await axios
         .post(url, values)
         .then((response) => {
-          console.log(response);
           if (response.data.status) {
-            console.log(
-              "hello",
-              response.data.status,
-              response.data.Admintoken
-            );
             localStorage.Admintoken = response.data.Admintoken;
             navigate("/adminpage");
           } else {
-            navigate("/adminregister");
+            alert("invalid email or password");
+            setLoading(false);
             console.log(response.data.message);
           }
         })
         .catch((error) => {
+          alert("Network Error");
+          setLoading(false);
           console.error("There was an error!", error);
         });
     },
@@ -98,12 +97,51 @@ const AdminLogin = () => {
                 <div className="text-danger">
                   {formik.touched.password && formik.errors.password}
                 </div>
-                <button
-                  type="submit"
-                  className="btn btn-success form-control mt-3 mb-2"
-                >
-                  Submit
-                </button>
+
+                {loading ? (
+                  <>
+                    <button
+                      type="submit"
+                      className="btn btn-success form-control mt-3 mb-2 invalid"
+                      invalid
+                    >
+                      Submit
+                    </button>
+                    <div className="mt-3 mb-3 text-center">
+                      <div class="spinner-grow text-primary" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-secondary" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-success" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-danger" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-warning" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-info" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-light" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                      <div class="spinner-grow text-dark" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <button
+                    type="submit"
+                    className="btn btn-success form-control mt-3 mb-2"
+                  >
+                    Submit
+                  </button>
+                )}
               </form>
               <div className="text-center text-success fw-bold">
                 <a className="text-success" href="/adminregister">

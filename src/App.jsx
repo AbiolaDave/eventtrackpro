@@ -22,7 +22,6 @@ import CounterRegister from "./Pages/CounterRegister";
 import Dashboard from "./Pages/Dashboard";
 import Events from "./Pages/Events";
 import Home from "./Pages/Home";
-import Login from "./Pages/Login";
 import NewEvent from "./Pages/NewEvent";
 import Register from "./Pages/Register";
 import SelectLogin from "./Pages/SelectLogin";
@@ -33,7 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<SelectLogin />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/adminmenu" element={<AdminMenu />} />
         <Route path="/adminregister" element={<AdminRegister />} />
