@@ -9,19 +9,25 @@ import countlogo from "../multimedia/attendance-logo1.jpeg";
 
 const Register = () => {
   let url = "https://eventtrackpro-backend.onrender.com/user/register";
-  
+
   const [loading, setLoading] = useState(false);
   const [registeredUsers, setregisteredUsers] = useState([]);
   const [userqrcode, setuserqrcode] = useState("");
   const qrRef = useRef(null);
 
   const downloadQRCode = () => {
-    html2canvas(qrRef.current).then((canvas) => {
-      const link = document.createElement("a");
-      link.href = canvas.toDataURL();
-      link.download = "qrcode.png";
-      link.click();
-    });
+    html2canvas(qrRef.current)
+      .then((canvas) => {
+        const link = document.createElement("a");
+        link.href = canvas.toDataURL();
+        link.download = "qrcode.png";
+        link.click();
+      })
+      .then(() => {
+        alert(
+          "QR Code successfully downloaded. Please keep safe for scanning when needed"
+        );
+      });
   };
 
   let navigate = useNavigate();
@@ -37,21 +43,23 @@ const Register = () => {
       userqrcode: "",
     },
     onSubmit: async (values) => {
-      const userqrcode = formik.values.userName; 
-      await axios
-        .post(url, {
-          ...values,
-          userqrcode: userqrcode, // Include userqrcode in the data
-        })
-        .then((response) => {
-          console.log(response);
-          if (response.data.staus) {
-            console.log("hello", response.data.status);
-            navigate("/login");
-          } else {
-            console.log(response.data.message);
-          }
-        });
+      if (confirm("submit and dowload QR Code?")) {
+        const userqrcode = formik.values.userName;
+        await axios
+          .post(url, {
+            ...values,
+            userqrcode: userqrcode,
+          })
+          .then(async (response) => {
+            console.log(response);
+            if (response.data.staus) {
+            await  downloadQRCode();
+              navigate("/login");
+            } else {
+              console.log(response.data.message);
+            }
+          });
+      }
     },
     validationSchema: yup.object({
       firstname: yup.string().required("This field is required"),
@@ -217,12 +225,12 @@ const Register = () => {
                     />
                   </div>
                 </div>
-                <button
+                {/* <button
                   className="btn btn-success form-control mt-3 col-3"
                   onClick={downloadQRCode}
                 >
                   Download QR Code
-                </button>
+                </button> */}
                 {loading ? (
                   <>
                     <button
