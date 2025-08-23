@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "../Components/Navbar";
 import "../Components/welcomePage.css";
 

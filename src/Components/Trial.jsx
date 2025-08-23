@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import QRCode from "react-qr-code";
 import html2canvas from "html2canvas";
 
