@@ -18,7 +18,7 @@
 }
 .listing {
   position: relative;
-  /* margin-top: 50px; */
+  /* margin-top: - 50px; */
   overflow-y: scroll !important;
 }
 .coc {
@@ -26,18 +26,18 @@
   z-index: 1;
   color: green;
   height: 140vh;
-    width: 1200px;
+  width: 1200px;
   font-family: emirates;
   background: lightgray;
   /* overflow-x: hidden !important; */
   overflow-y: scroll;
   text-decoration: none;
 }
-.coc li{
-    text-decoration: none;
-    list-style: none;
-    margin-top: 50px;
-    text-align: center;
+.coc li {
+  text-decoration: none;
+  list-style: none;
+  margin-top: 50px;
+  text-align: center;
 }
 .coc a {
   color: green;
@@ -59,7 +59,7 @@
   font-family: emirates;
 }
 @media only screen and (width < 500px) {
-  .con-box {
+  .conbox {
     width: 300px !important;
     /* background-color: red !important; */
   }

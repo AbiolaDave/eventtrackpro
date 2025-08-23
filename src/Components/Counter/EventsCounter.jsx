@@ -182,7 +182,7 @@ const EventsCounter = (props) => {
       </div>
       <div className={`${Style.coc} text-center`}>
         {event ? (
-          <div className={`text-center mt-5 mb-5 ${Style.coc-eve}`}>
+          <div className={`text-center mt-5 mb-5 ${Style.coceve}`}>
             <h2>{event.eventName}</h2>
             <p>Date: {event.setDate}</p>
             <p>Rows: {event.addRow}</p>
@@ -225,7 +225,7 @@ const EventsCounter = (props) => {
             ) : null}
 
             {addCounter ? (
-              <div className={`mt-3 col-3 col-sm-5 container mx-auto p-2 rounded-2 mb-3 ${Style.count-form}`}>
+              <div className={`mt-3 col-3 col-sm-5 container mx-auto p-2 rounded-2 mb-3 ${Style.countform}`}>
                 <h1 className="text-center text-success">Event Count</h1>
                 <form onSubmit={formik.handleSubmit}>
                   <label htmlFor="male" className="text-success fw-bold">

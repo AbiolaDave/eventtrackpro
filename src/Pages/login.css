@@ -22,7 +22,7 @@
   box-shadow: rgb(184, 184, 184) 6px 6px 23px 6px !important;
 }
 @media only screen and (width < 500px) {
-     .con-box{
+  .conbox {
     width: 300px !important;
- }
+  }
 }

@@ -135,7 +135,7 @@ const CountEvent = (props) => {
     <>
       <div className={Style.coc}>
         <div
-          className={`${Style.container - two} col-5 col-sm-4 mx-auto p-3 mt-5`}
+          className={`${Style.containertwo} col-5 col-sm-4 mx-auto p-3 mt-5`}
         >
           <div className="text-center text-success fw-bold">
             <h3 className="fw-bold">Scan Event</h3>

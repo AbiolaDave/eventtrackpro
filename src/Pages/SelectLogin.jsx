@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../Components/Navbar";
 import "../Components/welcomePage.css";
 
@@ -8,7 +7,7 @@ const SelectLogin = () => {
       <Navbar />
       <div className="backg d-flex justify-content-center align-items-center">
         <div className="mt-5 container ">
-          <div className="reg col-3 col-sm-5 mx-auto p-3 border rounded-2 mt-5 mb-5 con-box">
+          <div className="reg col-3 col-sm-5 mx-auto p-3 border rounded-2 mt-5 mb-5 conbox">
             <div className="mt-5 d-flex text-center mx-auto text-success ">
               <a className="loginstyle mx-auto" href="/adminlogin">
                 <i

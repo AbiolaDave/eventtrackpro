@@ -351,7 +351,7 @@
   }
 }
 @media only screen and (width < 500px) {
-  .con-box {
+  .conbox {
     width: 300px !important;
     /* background-color: red !important; */
   }

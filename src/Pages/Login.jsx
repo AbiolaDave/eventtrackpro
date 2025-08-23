@@ -65,7 +65,7 @@ const Login = () => {
               className={`${
                 Style.reg
               } col-3 col-sm-4 mx-auto p-3 rounded-2 border  mt-5 mb-5 ${
-                Style.con - box
+                Style.conbox
               }`}
             >
               <div className="text-center text-success fw-bold mt-5">

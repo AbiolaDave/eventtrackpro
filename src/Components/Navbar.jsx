@@ -1,8 +1,7 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
+import Style from "../Components/Admin/CreateEvent.module.css";
 import "../Components/welcomePage.css";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
-import Style from "../Components/Admin/CreateEvent.module.css";
 
 const style = {
   backgroundColor: "green",
@@ -27,9 +26,7 @@ const Navbar = () => {
               src={countlogo}
               alt=""
             />
-            <h3 className="text-white fw-bold fs-1 brand-name">
-              EventTrackPro
-            </h3>
+            <h3 className="text-white fw-bold fs-1 brandname">EventTrackPro</h3>
           </a>
           <button
             className="navbar-toggler"

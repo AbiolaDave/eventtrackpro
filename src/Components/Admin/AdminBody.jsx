@@ -1,3 +1,4 @@
+import React from 'react' 
 import { useDispatch } from "react-redux";
 import img13 from "../../multimedia/Designer(10).jpeg";
 import img12 from "../../multimedia/Designer(15).jpeg";

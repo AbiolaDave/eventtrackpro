@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useFormik } from "formik";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+import Style from "../Components/Admin/CreateEvent.module.css";
 import "../Pages/adminLogin.css";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
-import Style from "../Components/Admin/CreateEvent.module.css";
 
 
 const AdminRegister = () => {
@@ -51,7 +51,7 @@ const AdminRegister = () => {
     <main className={`min-vh-150 ${Style.backg} d-flex justify-content-center align-items-center`}>
       <div className="container mt-5">
         <div className={Style.row}>
-          <div className={`${Style.reg} col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5 ${Style.con-box}`}>
+          <div className={`${Style.reg} col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5 ${Style.conbox}`}>
             <div className="text-center mt-5">
               <img className="" height="50px" src={countlogo} alt="" />
             </div>

@@ -23,7 +23,7 @@ const AdminMenu = () => {
               className={`fa-solid fa-house fa-xl mx-1 my-2 ${Style.icons}`}
               style={{ color: "green" }}
             ></i>
-            <h5 className={`fw-bold ${Style.menu-actions}`}>Home</h5>
+            <h5 className={`fw-bold ${Style.menuactions}`}>Home</h5>
           </a>
         </div>
         <div
@@ -44,7 +44,7 @@ const AdminMenu = () => {
             className={`${Style.icons} fa-solid fa-users fa-2xl mx-1 my-3`}
             style={{ color: "green" }}
           ></i>
-          <h5 className={`fw-bold ${Style.menu-actions}`}>Add Counters</h5>
+          <h5 className={`fw-bold ${Style.menuactions}`}>Add Counters</h5>
         </div>
         <div
           onClick={() => dispatch(viewEvent())}
@@ -54,7 +54,7 @@ const AdminMenu = () => {
             className={`${Style.icons} fa-solid fa-eye fa-xl mx-1 my-2`}
             style={{ color: "green" }}
           ></i>
-          <h5 className={`fw-bold ${Style.menu-actions}`}>View Events</h5>
+          <h5 className={`fw-bold ${Style.menuactions}`}>View Events</h5>
         </div>
         <div className="mt-5  text-success ">
           <a className={Style.loginstyle} href="/counterlogin">
@@ -62,7 +62,7 @@ const AdminMenu = () => {
               className={`${Style.icons} fa-solid fa-right-to-bracket fa-2xl mx-1 my-4`}
               style={{ color: "green" }}
             ></i>
-            <h5 className={`fw-bold ${Style.menu-actions}`}>Counter LogIn</h5>
+            <h5 className={`fw-bold ${Style.menuactions}`}>Counter LogIn</h5>
           </a>
         </div>
         <div className="mt-5  text-success">
