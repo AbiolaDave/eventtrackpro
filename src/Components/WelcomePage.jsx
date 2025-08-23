@@ -1,11 +1,12 @@
 import React from "react";
 import "./welcomePage.css";
+import Style from "../Components/Admin/CreateEvent.module.css";
 
 const WelcomePage = () => {
   return (
     <>
-      <main className="min-vh-100 hero d-flex justify-content-center align-items-center">
-        <div className="mt-5 container welcome">
+      <main className={`min-vh-100 ${Style.hero} d-flex justify-content-center align-items-center`}>
+        <div className={`mt-5 container ${Style.welcome}`}>
           <h1 className="text-white display-2 fw-bold mt-5 text-shadow-sm">
             <span className="text-success ">Welcome to EventTrackPro</span>
             <span className="">

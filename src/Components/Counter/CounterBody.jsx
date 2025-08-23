@@ -1,9 +1,9 @@
-import React from "react";
 import { useDispatch } from "react-redux";
 import img13 from "../../multimedia/Designer(10).jpeg";
 import img12 from "../../multimedia/Designer(15).jpeg";
 import img10 from "../../multimedia/Designer(22).jpeg";
 import img6 from "../../multimedia/Designer(23).jpeg";
+import Style from "../Admin/CreateEvent.module.css";
 import { addCounter, startNewEvent, viewEvent } from "../redux/newEvent";
 
 const CounterBody = (props) => {
@@ -12,12 +12,12 @@ const CounterBody = (props) => {
   return (
     <>
       {/* <div> */}
-      <div className="heroe">
-        <div className="container d-flex cov">
-          <div className="simplified">
+      <div className={Style.heroe}>
+        <div className={`container d-flex ${Style.cov}`}>
+          <div className={Style.simplified}>
             <img src={img13} alt="" />
           </div>
-          <div className="enroll mx-5 mt-5">
+          <div className={`${enroll} mx-5 mt-5`}>
             <h1>Simplified Event Tracking</h1>
             <p>
               Easy records keeping for events. Keep track of event attendance,
@@ -27,11 +27,11 @@ const CounterBody = (props) => {
             </p>
           </div>
         </div>
-        <div class="blog-grid">
-          <div class="box0">
+        <div class={Style.bloggrid}>
+          <div class={Style.box0}>
             <img src={img12} alt="" />
-            <div class="tag">Events</div>
-            <div className="divide">
+            <div class={Style.tag}>Events</div>
+            <div className={Style.divide}>
               <h5 class="">Create Events</h5>
               <p>
                 Create event and set event date. Every event has a unique
@@ -39,7 +39,7 @@ const CounterBody = (props) => {
               </p>
             </div>
             <hr />
-            <div class="author">
+            <div class={Style.author}>
               <button
                 onClick={() => dispatch(startNewEvent())}
                 className="btn btn-success mx-3"
@@ -48,10 +48,10 @@ const CounterBody = (props) => {
               </button>
             </div>
           </div>
-          <div class="box0">
+          <div class={Style.box0}>
             <img src={img6} alt="" />
-            <div class="tag p-2">Counter</div>
-            <div className="divide">
+            <div class={`${Style.tag} p-2`}>Counter</div>
+            <div className={Style.divide}>
               <h5>Add Counter</h5>
               <p>
                 Add counter by scanning their personal qr-code. Counters take
@@ -59,7 +59,7 @@ const CounterBody = (props) => {
               </p>
             </div>
             <hr />
-            <div class="author d-flex">
+            <div class={`${Style.author} d-flex`}>
               <button
                 onClick={() => dispatch(addCounter())}
                 className="btn btn-success mx-3"
@@ -68,7 +68,7 @@ const CounterBody = (props) => {
               </button>
             </div>
           </div>
-          <div class="box0">
+          <div class={Style.box0}>
             <img src={img10} alt="" />
             <div class="tag">All Events</div>
             <h5>View Events</h5>
@@ -77,7 +77,7 @@ const CounterBody = (props) => {
               records, details and monitor event growth.
             </p>
             <hr />
-            <div class="author d-flex">
+            <div class={`${Style.author} d-flex`}>
               <button
                 onClick={() => dispatch(viewEvent())}
                 className="btn btn-success mx-3"

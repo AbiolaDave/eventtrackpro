@@ -2,8 +2,8 @@ import axios from "axios";
 import { useFormik } from "formik";
 import html2canvas from "html2canvas";
 import React, { useRef, useState } from "react";
-import QRCode from "react-qr-code";
 import * as yup from "yup";
+import Style from "../Admin/CreateEvent.module.css"
 import "./createEvents.css";
 
 const CreateEvents = (props) => {
@@ -23,7 +23,6 @@ const CreateEvents = (props) => {
     });
   };
 
-
   let url = "https://eventtrackpro-backend.onrender.com/admin/adminpage";
 
   const formik = useFormik({
@@ -42,9 +41,9 @@ const CreateEvents = (props) => {
 
         let eventObj = {
           ...values,
-          qrCode: unique, 
-          eventId: randomNumber, 
-          uniqueId: unique, 
+          qrCode: unique,
+          eventId: randomNumber,
+          uniqueId: unique,
           admin: props.admin,
         };
 
@@ -54,7 +53,7 @@ const CreateEvents = (props) => {
           } else {
             localStorage.token = response.data.token;
             console.log(response.data.message);
-            window.alert("event has been added successfully")
+            window.alert("event has been added successfully");
             // navigate("/adminpage");
           }
         });
@@ -70,7 +69,7 @@ const CreateEvents = (props) => {
   });
   return (
     <>
-      <div className="create">
+      <div className={Style.create}>
         <div className="cointainer col-5 col-sm-4 mx-auto p-3 mt-5  ">
           <div className="text-center text-success fw-bold">
             <div>Hello {props.admin}</div>
@@ -85,7 +84,7 @@ const CreateEvents = (props) => {
                 className={
                   formik.touched.eventName && formik.errors.eventName
                     ? "form-control mx-3  text-success is-invalid"
-                    : "bdl form-control my-2 text-success"
+                    : `${Style.bdl} form-control my-2 text-success`
                 }
                 type="text"
                 placeholder="Name of Event"
@@ -105,7 +104,7 @@ const CreateEvents = (props) => {
                   className={
                     formik.touched.setDate && formik.errors.setDate
                       ? "form-control mx-3  text-success is-invalid"
-                      : "bdl form-control my-2 text-success"
+                      : ` ${Style.bdl}  form-control my-2 text-success`
                   }
                   type="date"
                   placeholder=""
@@ -126,7 +125,7 @@ const CreateEvents = (props) => {
                   className={
                     formik.touched.serviceIndex && formik.errors.serviceIndex
                       ? "form-control mx-3  text-success is-invalid"
-                      : "bdl form-control my-2 text-success"
+                      : `${Style.bdl} form-control my-2 text-success`
                   }
                   type="text"
                   placeholder="Add number of service index"
@@ -147,7 +146,6 @@ const CreateEvents = (props) => {
                   Add Event
                 </button>
               </div>
-             
             </form>
           </div>
         </div>

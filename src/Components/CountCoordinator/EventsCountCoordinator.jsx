@@ -8,6 +8,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import * as yup from "yup";
 import { startCount } from "../../Components/redux/newEvent";
 import "./eventCountCoordinator.css";
+import Style from "../Admin/CreateEvent.module.css";
 // import "../Admin/eventList.css"
 
 const EventsCountCoordinator = (admin) => {
@@ -64,14 +65,14 @@ const EventsCountCoordinator = (admin) => {
   }, [eventId, rejectedCounts]);
 
   useEffect(() => {
-    checkEvent();
+    // checkEvent();
     viewCount();
     handleServiceIndexChange();
     assignCounter();
   }, [event]);
 
   const assignCounter = (event) => {
-    console.log(counters, "huuuuuulk");
+    console.log(counters);
   };
 
   const handleDownloadPdf = () => {
@@ -84,7 +85,7 @@ const EventsCountCoordinator = (admin) => {
 
     html2canvas(input, {
       scale: 2,
-      useCORS: true, // if there are external resources like images
+      useCORS: true, 
       logging: true,
     })
       .then((canvas) => {
@@ -125,8 +126,11 @@ const EventsCountCoordinator = (admin) => {
         } else {
           console.log(response.data.message, "message");
         }
+      }).catch((error)=>{
+        alert("Network error")
       });
     } catch (error) {
+      alert("An error occured")
       console.error("Error fetching events:", error);
     }
   };
@@ -336,7 +340,7 @@ const EventsCountCoordinator = (admin) => {
   };
 
   return (
-    <div className="showEvent">
+    <div className={Style.showEvent}>
       <div className="text-center text-light bg-success p-1 fw-bold">
         <h3 className="mt-2">EVENT</h3>
       </div>
@@ -368,7 +372,7 @@ const EventsCountCoordinator = (admin) => {
                   />
                 </div>
                 {serviceIndexes.map((_, index) => (
-                  <div className="cointainer col-5 col-sm-4 mx-auto mt-3 ">
+                    <div className={`${Style.cointainer} col-5 col-sm-4 mx-auto mt-3`}>
                     <div className="text-center" key={index}>
                       <label className="text-success fw-bold" htmlFor="">
                         Assign counter to Service Index {index + 1}:

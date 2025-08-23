@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { setSender } from "../redux/newEvent";
+import Style from "../Admin/CreateEvent.module.css";
+
 
 const CountCoordinatorEvents = (props) => {
   const [events, setEvents] = useState([]);
@@ -49,7 +51,7 @@ const CountCoordinatorEvents = (props) => {
 
   return (
     <div>
-      <div className="coc">
+      <div className={Style.coc}>
         <div className="text-center text-light bg-success p-1 fw-bold">
           <h3 className="fw-bold">All Events</h3>
         </div>

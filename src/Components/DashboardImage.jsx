@@ -1,5 +1,6 @@
 import React from "react";
 import dashboardImg from "../multimedia/Home.png";
+import Style from "../Components/Admin/CreateEvent.module.css";
 
 const style = {
   width: "900px",

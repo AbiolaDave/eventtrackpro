@@ -11,6 +11,7 @@ import FooterComp from "../Components/FooterComp";
 import MainNavbar from "../Components/MainNavbar";
 import { resetPage } from "../Components/redux/newEvent";
 import "./adminPage.css"
+import Style from "../Components/Admin/CreateEvent.module.css";
 
 
 const AdminPage = () => {
@@ -72,8 +73,9 @@ const AdminPage = () => {
     <>
       <MainNavbar />
       <div className="d-flex">
-        <AdminMenu />
+        <AdminMenu>
         {componentToDisplay}
+        </AdminMenu>
       </div>
       <div className="">
         <FooterComp />

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { startNewEvent, viewEvent } from "../redux/newEvent";
+import Style from "../Admin/CreateEvent.module.css";
 
 const style = {
   width: "250px",
@@ -15,9 +16,9 @@ const CountCoordinatorMenu = () => {
 
   return (
     <>
-      <div className="admin">
+      <div className={Style.admin}>
         <div className="mt-5 d-flex text-success">
-          <a className="loginstyle" href="/">
+          <a className={Style.loginstyle} href="/">
             <i
               class="fa-solid fa-house fa-xl mx-2 my-2"
               style={{ color: "green" }}
@@ -26,7 +27,7 @@ const CountCoordinatorMenu = () => {
           </a>
         </div>
         <div onClick={() => dispatch(startNewEvent())} className="mt-5 d-flex">
-          <a className="loginstyle">
+          <a className={Style.loginstyle}>
             <i
               class="fa-regular fa-calendar-days fa-2xl mx-2 my-2"
               style={{ color: "green" }}
@@ -36,9 +37,9 @@ const CountCoordinatorMenu = () => {
         </div>
         <div
           onClick={() => dispatch(viewEvent())}
-          className="mt-5 d-flex loginstyle"
+          className={`mt-5 d-flex ${Style.loginstyle}`}
         >
-          <a className="loginstyle">
+          <a className={Style.loginstyle}>
             <i
               class="fa-solid fa-eye fa-2xl mx-2 my-2"
               style={{ color: "green" }}
@@ -47,7 +48,7 @@ const CountCoordinatorMenu = () => {
           </a>
         </div>
         <div className="mt-5 d-flex text-success ">
-          <a className="loginstyle" href="/adminlogin">
+          <a className={Style.loginstyle} href="/adminlogin">
             <i
               class="fa-solid fa-right-to-bracket fa-2xl mx-2 my-2"
               style={{ color: "green" }}
@@ -56,7 +57,7 @@ const CountCoordinatorMenu = () => {
           </a>
         </div>
         <div className="mt-5 d-flex text-success">
-          <a className="loginstyle" href="/counterlogin">
+          <a className={Style.loginstyle} href="/counterlogin">
             <i
               class="fa-solid fa-right-to-bracket fa-2xl mx-2 my-3"
               style={{ color: "green" }}

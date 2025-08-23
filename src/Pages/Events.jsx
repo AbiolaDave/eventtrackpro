@@ -7,6 +7,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import FooterComp from "../Components/FooterComp";
 import MainNavbar from "../Components/MainNavbar";
 import { startCount } from "../Components/redux/newEvent";
+import Style from "../Components/Admin/CreateEvent.module.css";
+
 
 const Events = () => {
   let unique;
@@ -268,7 +270,7 @@ const Events = () => {
   return (
     <>
       <MainNavbar />
-      <div className="showEvent">
+      <div className={Style.showEvent}>
         <div className="text-center text-light bg-success p-1 fw-bold">
           <h3 className="mt-2">EVENT</h3>
         </div>
@@ -425,7 +427,7 @@ const Events = () => {
             ) : null}
           </div>
         ) : (
-          <div className="showEvent">Loading event details...</div>
+          <div className={Style.showEvent}>Loading event details...</div>
         )}
       </div>
       <FooterComp />

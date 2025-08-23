@@ -1,45 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Style from "../Admin/CreateEvent.module.css";
+
 
 const StartCount = (props) => {
   const [scanResults, setScanResults] = useState([]);
   const [admin, setAdmin] = useState("");
   const [foundEvent, setFoundEvent] = useState([]);
   const [foundAdmin, setFoundAdmin] = useState([]);
-
-  //   useEffect(() => {
-  //     const scanner = new Html5QrcodeScanner("reader", {
-  //       qrbox: {
-  //         width: 450,
-  //         height: 350,
-  //         color: "red",
-  //       },
-  //       fps: 5,
-  //     });
-
-  //     scanner.render(success, error);
-
-  //     async function success(result) {
-  //       let found = await result;
-  //       try {
-  //         scanner.clear();
-  //         console.log(admin, result, found, "ooo");
-  //         await sendReq(result);
-  //         setScanResults([...scanResults, result]);
-  //         console.log(scanResults, result, props.userName, "pppp");
-  //       } catch (err) {
-  //         console.log(err);
-  //       }
-  //     }
-
-  //     function error(err) {
-  //       console.warn(err);
-  //     }
-
-  //     return () => {
-  //       scanner.clear();
-  //     };
-  //   }, [foundAdmin]);
 
   useEffect(() => {
     let url = "https://eventtrackpro-backend.onrender.com/counter/countevent";
@@ -128,8 +96,8 @@ const StartCount = (props) => {
 
   return (
     <>
-      <div className="coc">
-        <div className="container-two col-5 col-sm-4 mx-auto p-3 mt-5">
+      <div className={Style.coc}>
+        <div className={`${Style.container-two} col-5 col-sm-4 mx-auto p-3 mt-5`}>
           <div className="text-center text-success fw-bold">
             <h3 className="fw-bold">Scan Event</h3>
           </div>

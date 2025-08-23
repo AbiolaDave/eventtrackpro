@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
 library.add(faCoffee);
+import Style from "../Components/Admin/CreateEvent.module.css";
 
 const style = {
   backgroundColor: "green",
@@ -45,7 +46,7 @@ const Navbar2 = (props) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="ollapse navbar-collapse" id="navbarSupportedContent">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item mx-3">
                 <a
@@ -110,7 +111,7 @@ const Navbar2 = (props) => {
                       size="2xl"
                       style={{ color: "#ffffff" }}
                     />
-                    <div className="num fw-bold">
+                    <div className={`${Style.num} fw-bold`}>
                       <p>{numb}</p>
                     </div>
                   </div>

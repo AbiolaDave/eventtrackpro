@@ -5,13 +5,14 @@ import img10 from "../multimedia/event33.jpg";
 import img17 from "../multimedia/pexels-ketut-subiyanto-4350099.avif";
 import img8 from "../multimedia/start-event-planning-service.jpg";
 import img29 from "../multimedia/ushers.jpg";
+import Style from "../Components/Admin/CreateEvent.module.css";
 
 const SectionHome = () => {
   return (
     <>
-      <section className="era">
-        <div className="grid">
-          <div className="grid0 grid1">
+      <section className={Stylr.era}>
+        <div className={Style.grid}>
+          <div className={`${Style.grid0} ${Style.grid1}`}>
             <img src={img6} alt="" />
             <h2>Create Event</h2>
             <p>
@@ -20,7 +21,7 @@ const SectionHome = () => {
             </p>
             <h5>Get Started</h5>
           </div>
-          <div className="grid0 grid2">
+          <div className={`${Style.grid0} ${Style.grid2}`}>
             <img src={img29} alt="" />
             <h2>Take Count</h2>
             <p>
@@ -29,7 +30,7 @@ const SectionHome = () => {
             </p>
             <h5>Get Started</h5>
           </div>
-          <div className="grid0 grid3">
+          <div className={`${Style.grid0} ${Style.grid3}`}>
             <img src={img8} alt="" />
             <h2>My Events</h2>
             <p>
@@ -38,7 +39,7 @@ const SectionHome = () => {
             </p>
             <h5>Get Started</h5>
           </div>
-          <div className="grid0 grid4">
+          <div className={`${Style.grid0} ${Style.grid4}`}>
             <img src={img10} alt="" />
             <h2>My Page</h2>
             <p>
@@ -47,7 +48,7 @@ const SectionHome = () => {
             </p>
             <h5>Sign Up</h5>
           </div>
-          <div className="grid0 grid5">
+          <div className={`${Style.grid0} ${Style.grid5}`}>
             <img src={img9} alt="" />
             <h2>Blog</h2>
             <p>
@@ -56,7 +57,7 @@ const SectionHome = () => {
             </p>
             <h5>Sign up</h5>
           </div>
-          <div className="grid0 grid6">
+          <div className={`${Style.grid0} ${Style.grid6}`}>
             <img src={img17} alt="" />
             <h2>About Us</h2>
             <p>

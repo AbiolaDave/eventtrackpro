@@ -58,3 +58,9 @@
   color: green;
   font-family: emirates;
 }
+@media only screen and (width < 500px) {
+  .con-box {
+    width: 300px !important;
+    /* background-color: red !important; */
+  }
+}

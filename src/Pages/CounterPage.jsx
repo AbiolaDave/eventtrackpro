@@ -11,6 +11,8 @@ import FooterComp from "../Components/FooterComp";
 import MainNavbar from "../Components/MainNavbar";
 import { resetPage } from "../Components/redux/newEvent";
 import "./adminPage.css";
+import Style from "../Components/Admin/CreateEvent.module.css";
+
 
 const CounterPage = () => {
   const dispatch = useDispatch();

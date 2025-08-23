@@ -1,6 +1,7 @@
 import React from "react";
 import firstImage from "../multimedia/video-for-event-marketing.jpg";
 
+
 const MainHome = (props) => {
 
   
@@ -9,8 +10,8 @@ const MainHome = (props) => {
     <>
       <main>
         <div className="">
-          <div className="cover">
-            <svg class="wave" viewBox="50 0 500 200">
+          <div className={Style.cover}>
+            <svg class={Style.wave} viewBox="50 0 500 200">
               <path
                 d="M 0 50 C 150 150 300 0 500 80 L 500 0 L 0 0"
                 fill="limegreen"
@@ -27,7 +28,7 @@ const MainHome = (props) => {
               ></path>
             </svg>
           </div>
-          <div className="dashhead d-flex">
+          <div className={`${Style.dashhead} d-flex`}>
             <div className="mx-5 text-white mt-2">
               <h3 className="fw-bold">Welcome, {props.user}</h3>
             </div>
@@ -39,7 +40,7 @@ const MainHome = (props) => {
                 EventTrackPro simplifies the way you manage event head counts.
               </p>
             </div>
-            <img className="firstImg" src={firstImage} alt="" />
+            <img className={Style.firstImg} src={firstImage} alt="" />
           </div>
         </div>
       </main>

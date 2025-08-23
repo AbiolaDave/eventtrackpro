@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Style from "../Admin/CreateEvent.module.css";
 
 const CountView = (props) => {
   const [events, setEvents] = useState([]);
@@ -33,7 +34,7 @@ const CountView = (props) => {
 
   return (
     <div>
-      <div className="create">
+      <div className={Style.create}>
         <div className="text-center text-light bg-success p-1 fw-bold">
           <h3 className="fw-bold">All Events</h3>
         </div>
@@ -53,7 +54,6 @@ const CountView = (props) => {
                     <p>Event ID: {eachEvent.eventId}</p>
                     <p>Unique ID: {eachEvent.uniqueId}</p>
                     <p>Admin: {eachEvent.admin}</p>
-                    {/* <p>qr {props.AdminqrCode}</p> */}
                     <img src={props.AdminqrCode} alt="" />
                   </Link>
                 </li>

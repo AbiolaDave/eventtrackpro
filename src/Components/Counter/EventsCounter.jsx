@@ -7,6 +7,7 @@ import QRCode from "react-qr-code";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import * as yup from "yup";
+import Style from "../Admin/CreateEvent.module.css";
 import { startCount } from "../redux/newEvent";
 import "./eventCounter.css";
 
@@ -175,13 +176,13 @@ const EventsCounter = (props) => {
   };
 
   return (
-    <div className="showEvent">
+    <div className={Style.showEvent}>
       <div className="text-center text-light bg-success p-1 fw-bold">
         <h3 className="mt-2">EVENT</h3>
       </div>
-      <div className="coc text-center">
+      <div className={`${Style.coc} text-center`}>
         {event ? (
-          <div className="text-center mt-5 mb-5 coc-eve">
+          <div className={`text-center mt-5 mb-5 ${Style.coc-eve}`}>
             <h2>{event.eventName}</h2>
             <p>Date: {event.setDate}</p>
             <p>Rows: {event.addRow}</p>
@@ -224,7 +225,7 @@ const EventsCounter = (props) => {
             ) : null}
 
             {addCounter ? (
-              <div className="mt-3 col-3 col-sm-5 container mx-auto p-2 rounded-2 mb-3 count-form">
+              <div className={`mt-3 col-3 col-sm-5 container mx-auto p-2 rounded-2 mb-3 ${Style.count-form}`}>
                 <h1 className="text-center text-success">Event Count</h1>
                 <form onSubmit={formik.handleSubmit}>
                   <label htmlFor="male" className="text-success fw-bold">
@@ -235,7 +236,7 @@ const EventsCounter = (props) => {
                     className={
                       formik.touched.male && formik.errors.male
                         ? "form-control my-2 text-success is-invalid"
-                        : "bdl form-control my-2 text-success"
+                        : `${Style.bdl} form-control my-2 text-success`
                     }
                     placeholder="Male"
                     name="male"
@@ -254,7 +255,7 @@ const EventsCounter = (props) => {
                     className={
                       formik.touched.female && formik.errors.female
                         ? "form-control my-2 text-success is-invalid"
-                        : "bdl form-control my-2 text-success"
+                        : `${Style.bdl} form-control my-2 text-success`
                     }
                     placeholder="Female"
                     name="female"
@@ -273,7 +274,7 @@ const EventsCounter = (props) => {
                     className={
                       formik.touched.children && formik.errors.children
                         ? "form-control my-2 text-success is-invalid"
-                        : "bdl form-control my-2 text-success"
+                          : `${Style.bdl} form-control my-2 text-success`
                     }
                     placeholder="Children"
                     name="children"
@@ -292,7 +293,7 @@ const EventsCounter = (props) => {
                     className={
                       formik.touched.teenagers && formik.errors.teenagers
                         ? "form-control my-2 text-success is-invalid"
-                        : "bdl form-control my-2 text-success"
+                        : `${Style.bdl} form-control my-2 text-success`
                     }
                     placeholder="Teenagers"
                     name="teenagers"
@@ -311,7 +312,7 @@ const EventsCounter = (props) => {
                     className={
                       formik.touched.vehicles && formik.errors.vehicles
                         ? "form-control my-2 text-success is-invalid"
-                        : "bdl form-control my-2 text-success"
+                        : `${Style.bdl} form-control my-2 text-success`
                     }
                     placeholder="Vehicles"
                     name="vehicles"
@@ -330,7 +331,7 @@ const EventsCounter = (props) => {
                     className={
                       formik.touched.motorbikes && formik.errors.motorbikes
                         ? "form-control my-2 text-success is-invalid"
-                        : "bdl form-control my-2 text-success"
+                        : `${Style.bdl} form-control my-2 text-success`
                     }
                     placeholder="Motor-bikes"
                     name="motorbikes"
@@ -349,7 +350,7 @@ const EventsCounter = (props) => {
                     className={
                       formik.touched.firsttimers && formik.errors.firsttimers
                         ? "form-control my-2 text-success is-invalid"
-                        : "bdl form-control my-2 text-success"
+                        : `${Style.bdl} form-control my-2 text-success`
                     }
                     placeholder="First Timers"
                     name="firsttimers"

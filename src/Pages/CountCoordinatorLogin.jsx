@@ -1,8 +1,9 @@
+import React, { useState } from "react";
 import axios from "axios";
 import { useFormik } from "formik";
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+import Style from "../Components/Admin/CreateEvent.module.css";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
 
 const CountCoordinatorLogin = () => {
@@ -48,10 +49,14 @@ const CountCoordinatorLogin = () => {
   });
 
   return (
-    <main className="min-vh-150 backg d-flex justify-content-center align-items-center">
+    <main
+      className={`min-vh-150 ${Style.backg} d-flex justify-content-center align-items-center`}
+    >
       <div className="container mt-5">
-        <div className="row">
-          <div className="reg col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5 con-box">
+        <div className={Style.row}>
+          <div
+            className={`${Style.reg} col-3 col-sm-5 mx-auto p-3 rounded-2 mt-5 mb-5 ${Style.conbox}`}
+          >
             <div className="text-center mt-5">
               <img className="" height="50px" src={countlogo} alt="" />
             </div>
@@ -67,7 +72,7 @@ const CountCoordinatorLogin = () => {
                 className={
                   formik.touched.email && formik.errors.email
                     ? "form-control my-2 text-success is-invalid"
-                    : "bdl form-control my-2 text-success"
+                    : `${Style.bdl} form-control my-2 text-success`
                 }
                 placeholder="Email"
                 name="email"
@@ -86,7 +91,7 @@ const CountCoordinatorLogin = () => {
                 className={
                   formik.touched.password && formik.errors.password
                     ? "form-control my-2 text-success is-invalid"
-                    : "bdl form-control my-2 text-success"
+                    : `${Style.bdl} form-control my-2 text-success`
                 }
                 placeholder="Password"
                 name="password"

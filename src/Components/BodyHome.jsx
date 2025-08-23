@@ -3,6 +3,7 @@ import img6 from "../multimedia/event-image.jpg";
 import img29 from "../multimedia/ushers.jpg";
 import img10 from "../multimedia/event33.jpg";
 import img11 from "../multimedia/security2.png";
+import Style from "../Components/Admin/CreateEvent.module.css";
 
 const BodyHome = () => {
   const style = {
@@ -10,12 +11,12 @@ const BodyHome = () => {
   }
   return (
     <>
-      <aside className="min-vh-100 era">
-        <div className="debit">
+      <aside className={`min-vh-100 ${Style.era}`}>
+        <div className={Style.debit}>
           <span>
             <img src={img6} alt="" />
           </span>
-          <span className="diva">
+          <span className={Style.diva}>
             <h1>Create New Event, Update Events And Records, Add Counter</h1>
           </span>
           <span>
@@ -26,11 +27,11 @@ const BodyHome = () => {
             </p>
           </span>
         </div>
-        <div className="counter">
+        <div className={Style.counter}>
           <span>
             <img src={img29} alt="" />
           </span>
-          <span className="diva">
+          <span className={Style.diva}>
             <h1>
               Register As Count-Coordinator Or Counter And Take Event Count
             </h1>
@@ -45,11 +46,11 @@ const BodyHome = () => {
         </div>
 
         <div>
-          <div className="pension">
+          <div className={Style.pension}>
             <span>
               <img src={img10} alt="" />
             </span>
-            <span className="diva">
+            <span className={Style.diva}>
               <h1>
                 View And Keep Track Of All Your Events, Edit Or Delete Events
               </h1>
@@ -62,11 +63,11 @@ const BodyHome = () => {
             </span>
           </div>
         </div>
-        <div className="secure">
+        <div className={Style.secure}>
           <span>
             <img src={img11} alt="" />
           </span>
-          <span className="diva">
+          <span className={Style.diva}>
             <h1>Your Security is our Priority</h1>
           </span>
           <span>

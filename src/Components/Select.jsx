@@ -15,26 +15,4 @@ import * as yup from "yup";
 
 
 
-              //  <div className="mt-3 text-center">
-              //    <label className="fw-bold" htmlFor="">
-              //      Add Counter:
-              //    </label>
-              //    <select
-              //      className="mx-3 col-9 rounded-2"
-              //      name="addCounter"
-              //      id="addCounter"
-              //    >
-              //      {/* <option value="" disabled>
-              //     Select a staff
-              //   </option> */}
-              //      {staff.map((eachStaff, index) => (
-              //        <option key={index} value={first}>
-              //          {eachStaff.firstname} {eachStaff.lastname}
-              //          {/* {console.log(first, val, "THIS IS FIRST")} */}
-              //        </option>
-              //      ))}
-              //    </select>
-              //    <div className="text-danger">
-              //      {formik.touched.addCounter && formik.errors.addCounter}
-              //    </div>
-              //  </div>;
+           

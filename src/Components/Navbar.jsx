@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../Components/welcomePage.css";
 import countlogo from "../multimedia/attendance-logo1.jpeg";
+import Style from "../Components/Admin/CreateEvent.module.css";
 
 const style = {
   backgroundColor: "green",
@@ -21,7 +22,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <a className="navbar-brand d-flex align-items-center" href="/">
             <img
-              className="mx-5 countlogo"
+              className={`mx-5 ${Style.countlogo}`}
               height="50px"
               src={countlogo}
               alt=""

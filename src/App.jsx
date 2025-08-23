@@ -25,6 +25,7 @@ import Home from "./Pages/Home";
 import NewEvent from "./Pages/NewEvent";
 import Register from "./Pages/Register";
 import SelectLogin from "./Pages/SelectLogin";
+import RexPage from "./Pages/RexPage";
 
 function App() {
   return (
@@ -66,7 +67,8 @@ function App() {
           path="/countcoordinator/:eventId"
           element={<EventsCountCoordinator />}
         />
-      </Routes>
+        <Route path='rex' element = {<RexPage/> } /> 
+       </Routes>
     </>
   );
 }

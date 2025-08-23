@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Html5QrcodeScanner } from "html5-qrcode";
 import React, { useEffect, useState } from "react";
+import Style from "../Admin/CreateEvent.module.css";
 
 const CountEvent = (props) => {
   const [scanResults, setScanResults] = useState([]);
@@ -132,8 +133,10 @@ const CountEvent = (props) => {
 
   return (
     <>
-      <div className="coc">
-        <div className="container-two col-5 col-sm-4 mx-auto p-3 mt-5">
+      <div className={Style.coc}>
+        <div
+          className={`${Style.container - two} col-5 col-sm-4 mx-auto p-3 mt-5`}
+        >
           <div className="text-center text-success fw-bold">
             <h3 className="fw-bold">Scan Event</h3>
           </div>
