@@ -192,7 +192,7 @@ td {
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.2)
     ),
-    url("../multimedia/video-for-event-marketing.jpg");
+    url("../../multimedia/video-for-event-marketing.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: fill;
